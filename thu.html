@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>thu nghiệm</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<input type="text" id="input-value" >
+<button type="button" onclick="addToList()">add</button>
+<button type="button" onclick="displayList()">Display</button>
+<div id="result"></div>
+<script>
+
+    let i = 0// khai bao gia tri index cua array
+    let list = Array();
+    // ham add cac gia tri tu the input vao list;
+    function addToList(){
+        let element = document.getElementById("input-value").value;
+        list.push(element);
+        document.getElementById("input-value").value = "";
+    }
+    function displayList(){
+        let element= "<hr/>";
+        for( let i = 0; i< list.length; i++ ){
+            element = element + list[i] + "<br>";
+        }
+        document.getElementById("result").innerHTML = element;
+    }
+</script>
+</body>
+</html>
